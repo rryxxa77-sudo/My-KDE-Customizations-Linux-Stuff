@@ -1,0 +1,28 @@
+# Commands that produce output must go BEFORE the instant prompt block
+# Run customfetch on terminal start (moved before instant prompt)
+if command -v customfetch &> /dev/null; then
+  customfetch
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+source /usr/share/cachyos-zsh-config/cachyos-config.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# System info aliases
+alias cf="customfetch"
+alias cufetch="customfetch"
+alias ff="fastfetch"
+alias nf="neofetch"
+
+
+#these might include things that are unnessecary as i am using cachyOS there might be some things that aren't for your system
+#delete or uncomment them
