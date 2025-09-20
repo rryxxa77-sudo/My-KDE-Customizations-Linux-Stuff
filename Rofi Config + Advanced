@@ -1,0 +1,172 @@
+configuration {
+    modi: "drun,run,window,ssh,emoji,web:~/.local/bin/rofi-web-search.sh";
+    font: "JetBrains Mono 12";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: " Apps";
+    display-run: " Run";
+    display-window: " Window";
+    display-ssh: " SSH";
+    display-emoji: "😀 Emoji";
+    display-web: "🌐 Web";
+    scroll-method: 0;
+    disable-history: false;
+    sidebar-mode: true;
+    steal-focus: false;
+    click-to-exit: true;
+    location: 0;
+    anchor: 0;
+    /* Key bindings */
+    kb-cancel: "Escape,Control+g,Control+bracketleft,Super+Escape";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-remove-to-eol: "Control+k";
+    kb-mode-complete: "Control+l";
+    drun {
+        display-name: " {name}";
+    }
+    window {
+        display-name: " {w}   {c}";
+    }
+}
+
+@theme "/dev/null"
+
+* {
+    bg-color: #1e1e2e;
+    bg-light: #313244;
+    fg-color: #cdd6f4;
+    fg-light: #f5e0dc;
+    
+    border-color: #89b4fa;
+    selected-bg: #45475a;
+    selected-fg: #f5e0dc;
+    
+    accent: #f38ba8;
+    urgent: #f38ba8;
+    
+    transparent: rgba(0,0,0,0);
+    
+    font: "JetBrains Mono 12";
+    
+    background-color: @transparent;
+    text-color: @fg-color;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @bg-color;
+    border: 3px;
+    border-color: @border-color;
+    border-radius: 12px;
+    width: 850px;
+    height: 500px;
+    padding: 30px;
+}
+
+message {
+    background-color: @bg-light;
+    text-color: @fg-color;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+mainbox {
+    children: [ inputbar, listview, mode-switcher ];
+    background-color: @transparent;
+    spacing: 20px;
+}
+
+inputbar {
+    background-color: @bg-light;
+    border-radius: 8px;
+    padding: 15px 20px;
+    spacing: 10px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @accent;
+    font: "JetBrains Mono Bold 14";
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @fg-color;
+    placeholder: "Type to search...";
+    placeholder-color: @fg-color;
+    vertical-align: 0.5;
+}
+
+listview {
+    background-color: @transparent;
+    columns: 1;
+    lines: 6;
+    spacing: 5px;
+    fixed-height: true;
+    scrollbar: true;
+}
+
+scrollbar {
+    width: 4px;
+    handle-width: 4px;
+    handle-color: @accent;
+    background-color: @bg-light;
+    border-radius: 4px;
+}
+
+element {
+    background-color: @transparent;
+    padding: 10px 15px;
+    spacing: 10px;
+    border-radius: 8px;
+    orientation: horizontal;
+}
+
+element normal {
+    background-color: @transparent;
+}
+
+element selected {
+    background-color: @selected-bg;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-text selected {
+    text-color: @selected-fg;
+}
+
+element-icon {
+    background-color: @transparent;
+    size: 24px;
+    border: 0px;
+}
+
+mode-switcher {
+    background-color: @bg-light;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 10px;
+}
+
+button {
+    background-color: @transparent;
+    text-color: @fg-color;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+button selected {
+    background-color: @accent;
+    text-color: @bg-color;
+}
