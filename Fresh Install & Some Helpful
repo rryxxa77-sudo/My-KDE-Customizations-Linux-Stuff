@@ -10,3 +10,5 @@ Installing KDE Discover:sudo pacman -S plasma-discover plasma-discover-backend-f
 
 #Recommended flatpak might be slow or not install at first try.Install something like spotify: flatpak install flathub com.spotify.Client
 via Terminal to fix it.
+
+#Set Recover session of via system settings for KDE.Pick start with new session
