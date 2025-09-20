@@ -1,0 +1,7 @@
+This uses panel colorizer which can be found from KDE Widgets + Drop it to the panel to use it
+
+Preset=Black
+Background and Shadow=Off
+Width=Fit Content
+Radius=All 30 Margin and Padding Untouched
+Visibilty=Dodge windows/auto hide
