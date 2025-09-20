@@ -1,0 +1,12 @@
+Waybar installition:sudo pacman -S waybar
+Waybar config location: ~/.config/waybar/config
+Waybar CSS location: ~/.config/waybar/style.css
+Kitty Terminal Installition:sudo pacman -S kitty
+Kitty Config Location: ~/.config/kitty/kitty.conf
+Rofi Installition: sudo pacman -S rofi
+Rofi Config Location: ~/.config/rofi/config.rasi
+customfetch installition: yay -S customfetch-bin (not mine huge thanks to tony500)
+customfetch location: ~/.config/customfetch/config.toml
+
+background music with mpv and melody always run (doesnt eat RAM or CPU 50MB CPU max):sudo pacman -S --noconfirm mpv yt-dlp && mkdir -p ~/.config/systemd/user && echo -e '[Unit]\nDescription=Background Music Player\n\n[Service]\nExecStart=/usr/bin/mpv --no-video --loop=inf "https://www.youtube.com/watch?v=efJJ1e7deC8"\nRestart=always\n\n[Install]\nWantedBy=default.target' > ~/.config/systemd/user/bg-music.service && systemctl --user daemon-reload && systemctl --user enable --now bg-music.service
+this is a one-liner which can be copy pasted you can also change the youtube link to have a different sound but currucent one is really good!
