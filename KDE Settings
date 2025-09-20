@@ -1,0 +1,12 @@
+Global Theme=Breeze
+Colors=Cosmic Cyberpunk (can be found here https://github.com/MurderFromMars/Cosmic-Cyberpunk-Color-scheme/releases/tag/V1.2)
+Application Style=Breeze
+Plasma Style=Irisdecent Round
+Window Decorations=Breeze
+Icons:Magna-Dark-Icons (can be found here https://store.kde.org/p/2102240)
+Cursors:Capitane
+System Sound:Ocean
+Splash Screen:Breeze
+SDDM:CachyOS Simply Black
+
+#Restore last session=off
