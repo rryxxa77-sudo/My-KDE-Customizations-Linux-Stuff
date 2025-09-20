@@ -1,0 +1,12 @@
+Remove Sudo Passcode (do not need to write sudo pass ever again) echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
+
+Installing yay:sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+Installing bauh:yay -S bauh (an app store to manage aur and flatpak and appimage)
+
+Installing flatpak:sudo pacman -S flatpak (reboot after)
+
+Installing KDE Discover:sudo pacman -S plasma-discover plasma-discover-backend-flatpak
+
+#Recommended flatpak might be slow or not install at first try.Install something like spotify: flatpak install flathub com.spotify.Client
+via Terminal to fix it.
